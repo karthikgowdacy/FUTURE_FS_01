@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Karthik Gowda C Y | Full Stack Web Developer & AI Engineer Portfolio</title>
+  <meta name="title" content="Karthik Gowda C Y | Full Stack Web Developer & AI Engineer Portfolio" />
+  <meta name="description" content="Portfolio of Karthik Gowda C Y — Computer Science Engineer, Full Stack Web Developer, and AI intern skilled in JavaScript, Python, Express, React, MySQL, and Cloud technology." />
+  <meta name="keywords" content="Karthik Gowda C Y, Full Stack Developer, AI Engineer, Portfolio, Software Engineering, Bengaluru, React, Node.js, Future Interns, Elewayte" />
+  <meta name="author" content="Karthik Gowda C Y" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://karthikgowdacy.dev/" />
+  <meta property="og:title" content="Karthik Gowda C Y | Full Stack & AI Developer Portfolio" />
+  <meta property="og:description" content="Explore projects, skills, internship experience, and certifications of Karthik Gowda C Y." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Karthik Gowda C Y | Full Stack & AI Developer Portfolio" />
+  <meta property="twitter:description" content="Explore projects, skills, internship experience, and certifications of Karthik Gowda C Y." />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Ambient Background Glows -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Header Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">
+        <span class="brand-logo">&lt;K/&gt;</span>
+        <span class="brand-text">Karthik Gowda</span>
+      </a>
+
+      <nav class="nav-links" id="nav-menu" aria-label="Primary Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#inbox" class="nav-link"><i class="fa-solid fa-inbox"></i> Inbox</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark theme">
+          <i class="fa-solid fa-moon"></i>
+          <span class="theme-label">Dark</span>
+        </button>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle mobile menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-copy animate-on-scroll">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            Available for Internships &amp; Developer Roles
+          </div>
+          <h1 class="hero-title">
+            Building <span class="gradient-text">Scalable Web Apps</span> &amp; Intelligent AI Solutions.
+          </h1>
+          <p class="hero-text">
+            Hi, I’m <strong>Karthik Gowda C Y</strong> — a Computer Science Engineering student and Full-Stack Developer intern. I bridge clean user experiences with robust backend architecture and modern AI capabilities.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">
+              <i class="fa-solid fa-paper-plane"></i> Get In Touch
+            </a>
+            <a class="btn btn-secondary" href="#projects">
+              <i class="fa-solid fa-code"></i> Explore Work
+            </a>
+            <a class="btn btn-outline" href="#about">
+              <i class="fa-solid fa-file-arrow-down"></i> Resume Brief
+            </a>
+          </div>
+
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/karthikgowdacy" target="_blank" rel="noreferrer" aria-label="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub Profile">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="mailto:karthikgowdacy@gmail.com" aria-label="Send Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-card glass-card animate-on-scroll">
+          <div class="hero-card-header">
+            <div class="terminal-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="terminal-title">developer_profile.json</span>
+          </div>
+          <div class="hero-card-content">
+            <div class="code-block">
+              <p><span class="syn-keyword">const</span> <span class="syn-var">developer</span> = {</p>
+              <p class="indent"><span class="syn-prop">name</span>: <span class="syn-str">'Karthik Gowda C Y'</span>,</p>
+              <p class="indent"><span class="syn-prop">role</span>: <span class="syn-str">'Full Stack &amp; AI Developer'</span>,</p>
+              <p class="indent"><span class="syn-prop">education</span>: <span class="syn-str">'Navkis College of Eng.'</span>,</p>
+              <p class="indent"><span class="syn-prop">location</span>: <span class="syn-str">'Bengaluru, India'</span>,</p>
+              <p class="indent"><span class="syn-prop">internships</span>: [<span class="syn-str">'Future Interns'</span>, <span class="syn-str">'Elewayte'</span>],</p>
+              <p class="indent"><span class="syn-prop">coreSkills</span>: [<span class="syn-str">'JavaScript'</span>, <span class="syn-str">'Python'</span>, <span class="syn-str">'Node'</span>, <span class="syn-str">'AI'</span>]</p>
+              <p>};</p>
+            </div>
+
+            <div class="contact-pill-list">
+              <div class="contact-pill">
+                <i class="fa-solid fa-envelope"></i>
+                <span>karthikgowdacy@gmail.com</span>
+              </div>
+              <div class="contact-pill">
+                <i class="fa-solid fa-phone"></i>
+                <span>+91-6364527371</span>
+              </div>
+              <div class="contact-pill">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Bengaluru, Karnataka</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-heading text-center animate-on-scroll">
+          <p class="eyebrow"><i class="fa-solid fa-user"></i> Background</p>
+          <h2>About <span class="gradient-text">Karthik Gowda</span></h2>
+          <p>Driven by curiosity, analytical thinking, and a dedication to crafting user-centric, high-performance applications.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-bio glass-card animate-on-scroll">
+            <h3 class="card-heading"><i class="fa-solid fa-compass"></i> My Developer Journey</h3>
+            <p>
+              As a Computer Science Engineering student at <strong>Navkis College of Engineering</strong>, I specialize in full-stack web application development and AI technology integration. My passion lies in solving complex practical problems with modern software patterns, responsive interfaces, and performant backends.
+            </p>
+            <p>
+              Currently, I am expanding my practical industry experience through dual full-stack developer internships at <strong>Future Interns</strong> and <strong>Elewayte Company</strong>, delivering production-ready web features, dynamic UI components, and API infrastructure.
+            </p>
+            
+            <div class="stats-row">
+              <div class="stat-box">
+                <span class="stat-number">2+</span>
+                <span class="stat-label">Full Stack Internships</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Key Certifications</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">4+</span>
+                <span class="stat-label">Major Projects</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-highlights glass-card animate-on-scroll">
+            <h3 class="card-heading"><i class="fa-solid fa-award"></i> Key Achievements</h3>
+            <ul class="icon-list">
+              <li>
+                <div class="icon-wrap"><i class="fa-solid fa-trophy"></i></div>
+                <div>
+                  <strong>NeuroNex Hackathon Participant</strong>
+                  <p>Engaged in rapid prototyping and problem-solving at Rajeev Gandhi Institute of Technology.</p>
+                </div>
+              </li>
+              <li>
+                <div class="icon-wrap"><i class="fa-solid fa-lightbulb"></i></div>
+                <div>
+                  <strong>Sparkathon 2026 Contributor</strong>
+                  <p>Showcased technical solution designs at Navkis College of Engineering technical fest.</p>
+                </div>
+              </li>
+              <li>
+                <div class="icon-wrap"><i class="fa-solid fa-volleyball"></i></div>
+                <div>
+                  <strong>VTU Volleyball Tournament Representative</strong>
+                  <p>Represented the college team in inter-university sports competitions, demonstrating teamwork and leadership.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack & Skills Section -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-heading text-center animate-on-scroll">
+          <p class="eyebrow"><i class="fa-solid fa-layer-group"></i> Expertise</p>
+          <h2>Technical <span class="gradient-text">Skills &amp; Toolkit</span></h2>
+          <p>A comprehensive overview of programming languages, web technologies, database tools, and AI concepts I utilize.</p>
+        </div>
+
+        <!-- Filter Tabs for Skills -->
+        <div class="skill-tabs animate-on-scroll">
+          <button class="skill-tab active" data-skill-category="all">All Skills</button>
+          <button class="skill-tab" data-skill-category="languages">Languages</button>
+          <button class="skill-tab" data-skill-category="web">Web &amp; Frameworks</button>
+          <button class="skill-tab" data-skill-category="ai">AI &amp; Data</button>
+          <button class="skill-tab" data-skill-category="tools">Tools &amp; Cloud</button>
+        </div>
+
+        <div class="skills-grid" id="skills-grid">
+          <!-- Skill Items -->
+          <div class="skill-card glass-card" data-category="languages">
+            <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+            <h4>Python</h4>
+            <span class="skill-tag">Language</span>
+          </div>
+
+          <div class="skill-card glass-card" data-category="languages">
+            <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+            <h4>JavaScript (ES6+)</h4>
+            <span class="skill-tag">Language</span>
+          </div>
+
+          <div class="skill-card glass-card" data-category="languages">
+            <div class="skill-icon"><i class="fa-brands fa-java"></i></div>
+            <h4>Java</h4>
+            <span class="skill-tag">Language</span>
+          </div>
+
+          <div class="skill-card glass-card" data-category="languages">
+            <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+            <h4>C Programming</h4>
+            <span class="skill-tag">Language</span>
+          </div>
+
+          <div class="skill-card glass-card" data-category="web">
+            <div class="skill-icon"><i class="fa-brands fa-react"></i></div>
+            <h4>React.js</h4>
+            <span class="skill-tag">Frontend</span>
+          </div>
+
+          <div class="skill-card glass-card" data-category="web">
+            <div class="skill-icon"><i class="fa-brands fa-node-js"></i></div>
+            <h4>Node.js &amp; Express</h4>
+            <span class="skill-tag">Backend</span>
+          </div>
+
+          <div class="skill-card glass-card" data-category="web">
+            <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+            <h4>HTML5 &amp; CSS3</h4>
+            <span class="skill-tag">Frontend</span>
+          </div>
+
+          <div class="skill-card glass-card" data-category="ai">
+            <div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
+            <h4>Generative AI</h4>
+            <span class="skill-tag">AI / ML</span>
+          </div>
+
+          <div class="skill-card glass-card" data-category="ai">
+            <div class="skill-icon"><i class="fa-solid fa-robot"></i></div>
+            <h4>Machine Learning Fundamentals</h4>
+            <span class="skill-tag">AI / ML</span>
+          </div>
+
+          <div class="skill-card glass-card" data-category="ai">
+            <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+            <h4>MySQL &amp; DBMS</h4>
+            <span class="skill-tag">Databases</span>
+          </div>
+
+          <div class="skill-card glass-card" data-category="tools">
+            <div class="skill-icon"><i class="fa-brands fa-github"></i></div>
+            <h4>Git &amp; GitHub</h4>
+            <span class="skill-tag">DevOps</span>
+          </div>
+
+          <div class="skill-card glass-card" data-category="tools">
+            <div class="skill-icon"><i class="fa-brands fa-google"></i></div>
+            <h4>Google Cloud Platform</h4>
+            <span class="skill-tag">Cloud</span>
+          </div>
+
+          <div class="skill-card glass-card" data-category="tools">
+            <div class="skill-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h4>Cyber Security Principles</h4>
+            <span class="skill-tag">Security</span>
+          </div>
+
+          <div class="skill-card glass-card" data-category="tools">
+            <div class="skill-icon"><i class="fa-solid fa-vial"></i></div>
+            <h4>Software Testing</h4>
+            <span class="skill-tag">QA</span>
+          </div>
+        </div>
+
+        <!-- Certifications Accordion / Cards -->
+        <div class="certifications-wrapper animate-on-scroll">
+          <h3 class="section-subheading"><i class="fa-solid fa-certificate"></i> Official Certifications</h3>
+          <div class="cert-grid">
+            <div class="cert-card glass-card">
+              <div class="cert-badge"><i class="fa-brands fa-google"></i></div>
+              <div class="cert-info">
+                <h4>Generative AI Certification</h4>
+                <p>Google Cloud</p>
+              </div>
+            </div>
+            <div class="cert-card glass-card">
+              <div class="cert-badge"><i class="fa-solid fa-building"></i></div>
+              <div class="cert-info">
+                <h4>Artificial Intelligence Certification</h4>
+                <p>IBM SkillsBuild</p>
+              </div>
+            </div>
+            <div class="cert-card glass-card">
+              <div class="cert-badge"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div class="cert-info">
+                <h4>JavaScript Training Certificate</h4>
+                <p>IIT Bombay</p>
+              </div>
+            </div>
+            <div class="cert-card glass-card">
+              <div class="cert-badge"><i class="fa-solid fa-user-shield"></i></div>
+              <div class="cert-info">
+                <h4>Cyber Security Workshop</h4>
+                <p>Indian Institute of Professional Studies</p>
+              </div>
+            </div>
+            <div class="cert-card glass-card">
+              <div class="cert-badge"><i class="fa-solid fa-laptop-code"></i></div>
+              <div class="cert-info">
+                <h4>Full Stack Workshop Completion</h4>
+                <p>Zysk Technologies</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Projects Section -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-heading text-center animate-on-scroll">
+          <p class="eyebrow"><i class="fa-solid fa-laptop-code"></i> Portfolio</p>
+          <h2>Featured <span class="gradient-text">Projects</span></h2>
+          <p>Practical real-world applications showcasing collaborative engineering, full-stack integration, and AI system design.</p>
+        </div>
+
+        <!-- Project Filter Buttons -->
+        <div class="project-filters animate-on-scroll">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+          <button class="filter-btn" data-filter="ai">AI &amp; Collaboration</button>
+          <button class="filter-btn" data-filter="database">Database &amp; Systems</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+          <!-- Project 1: CodeSync -->
+          <article class="project-card glass-card animate-on-scroll" data-category="fullstack ai">
+            <div class="project-header">
+              <div class="project-icon-box"><i class="fa-solid fa-code-compare"></i></div>
+              <span class="project-category-badge">Full Stack • AI</span>
+            </div>
+            <h3 class="project-title">CodeSync</h3>
+            <p class="project-desc">
+              A real-time collaborative coding platform integrated with AI assistance, user authentication, live room sharing, and synchronized multi-user code editing.
+            </p>
+            <div class="project-tech-tags">
+              <span>JavaScript</span>
+              <span>WebRTC</span>
+              <span>Node.js</span>
+              <span>AI Integration</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-small btn-secondary open-modal-btn" data-project="codesync">
+                <i class="fa-solid fa-circle-info"></i> Details
+              </button>
+              <a href="#contact" class="btn btn-small btn-outline">
+                <i class="fa-solid fa-comments"></i> Inquire
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 2: Blood Donation Management System -->
+          <article class="project-card glass-card animate-on-scroll" data-category="database fullstack">
+            <div class="project-header">
+              <div class="project-icon-box"><i class="fa-solid fa-droplet"></i></div>
+              <span class="project-category-badge">Database &amp; Systems</span>
+            </div>
+            <h3 class="project-title">Blood Donation Management</h3>
+            <p class="project-desc">
+              A centralized database management system for donor registration, blood inventory tracking by group, availability queries, and automated reporting.
+            </p>
+            <div class="project-tech-tags">
+              <span>Python</span>
+              <span>MySQL</span>
+              <span>Database Design</span>
+              <span>UI Design</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-small btn-secondary open-modal-btn" data-project="bloodbank">
+                <i class="fa-solid fa-circle-info"></i> Details
+              </button>
+              <a href="#contact" class="btn btn-small btn-outline">
+                <i class="fa-solid fa-comments"></i> Inquire
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 3: Personal Professional Portfolio -->
+          <article class="project-card glass-card animate-on-scroll" data-category="fullstack">
+            <div class="project-header">
+              <div class="project-icon-box"><i class="fa-solid fa-id-card"></i></div>
+              <span class="project-category-badge">Full Stack Web</span>
+            </div>
+            <h3 class="project-title">Developer Portfolio &amp; API</h3>
+            <p class="project-desc">
+              A recruiter-focused responsive website featuring glassmorphism design system, dark/light theme persistence, interactive skills matrix, and an Express contact API.
+            </p>
+            <div class="project-tech-tags">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>Node / Express</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-small btn-secondary open-modal-btn" data-project="portfolio">
+                <i class="fa-solid fa-circle-info"></i> Details
+              </button>
+              <a href="https://github.com" target="_blank" rel="noreferrer" class="btn btn-small btn-outline">
+                <i class="fa-brands fa-github"></i> Repository
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 4: Smart Task Manager -->
+          <article class="project-card glass-card animate-on-scroll" data-category="fullstack">
+            <div class="project-header">
+              <div class="project-icon-box"><i class="fa-solid fa-list-check"></i></div>
+              <span class="project-category-badge">Full Stack</span>
+            </div>
+            <h3 class="project-title">Smart Task Manager</h3>
+            <p class="project-desc">
+              Interactive dashboard application for real-time task tracking, priority status, categorization, and local database synchronization.
+            </p>
+            <div class="project-tech-tags">
+              <span>React</span>
+              <span>REST API</span>
+              <span>Express</span>
+              <span>JSON DB</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-small btn-secondary open-modal-btn" data-project="taskmanager">
+                <i class="fa-solid fa-circle-info"></i> Details
+              </button>
+              <a href="#contact" class="btn btn-small btn-outline">
+                <i class="fa-solid fa-comments"></i> Inquire
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Internship Experience Section -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <div class="section-heading text-center animate-on-scroll">
+          <p class="eyebrow"><i class="fa-solid fa-briefcase"></i> Track Record</p>
+          <h2>Internship <span class="gradient-text">Experience</span></h2>
+          <p>Hands-on industry experience building scalable web solutions, API integrations, and developer tools.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item glass-card animate-on-scroll">
+            <div class="timeline-badge"><i class="fa-solid fa-code"></i></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Full Stack Web Developer Intern</h3>
+                <span class="timeline-date"><i class="fa-regular fa-calendar"></i> Future Interns (Ongoing)</span>
+              </div>
+              <h4 class="company-name">Future Interns</h4>
+              <ul class="timeline-list">
+                <li>Developing high-impact portfolio and full-stack web applications following professional web standards.</li>
+                <li>Implementing responsive interfaces, dark/light theme systems, and RESTful API backend integrations.</li>
+                <li>Leveraging modern developer tools, clean code standards, and automated user feedback handlers.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item glass-card animate-on-scroll">
+            <div class="timeline-badge"><i class="fa-solid fa-server"></i></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Full Stack Intern</h3>
+                <span class="timeline-date"><i class="fa-regular fa-calendar"></i> Elewayte Company (Ongoing)</span>
+              </div>
+              <h4 class="company-name">Elewayte Company</h4>
+              <ul class="timeline-list">
+                <li>Engineered frontend UI components and backend server routes for data-driven web applications.</li>
+                <li>Collaborated on user authentication systems, database schema interactions, and form validations.</li>
+                <li>Optimized web performance and cross-browser responsiveness for client workflows.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 (Education) -->
+          <div class="timeline-item glass-card animate-on-scroll">
+            <div class="timeline-badge"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>B.E. in Computer Science &amp; Engineering</h3>
+                <span class="timeline-date"><i class="fa-regular fa-calendar"></i> Academic Degree</span>
+              </div>
+              <h4 class="company-name">Navkis College of Engineering</h4>
+              <ul class="timeline-list">
+                <li>Studied Core Computer Science coursework: Data Structures, Algorithms, DBMS, OS, and AI.</li>
+                <li>Active technical participant in state-level hackathons (NeuroNex, Sparkathon).</li>
+                <li>Represented college in sports (VTU Volleyball Tournament).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-heading text-center animate-on-scroll">
+          <p class="eyebrow"><i class="fa-solid fa-paper-plane"></i> Get In Touch</p>
+          <h2>Let's <span class="gradient-text">Connect &amp; Collaborate</span></h2>
+          <p>Have an internship opportunity, freelance project, or question? Send a message below and I will get back to you promptly.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Info Column -->
+          <div class="contact-info-card glass-card animate-on-scroll">
+            <h3><i class="fa-solid fa-address-card"></i> Direct Contact Info</h3>
+            <p class="contact-intro">
+              I am actively looking for software development internships, AI roles, and full-stack project opportunities.
+            </p>
+
+            <div class="contact-details">
+              <div class="detail-item">
+                <div class="detail-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <span class="detail-label">Email</span>
+                  <a href="mailto:karthikgowdacy@gmail.com" class="detail-value">karthikgowdacy@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="detail-item">
+                <div class="detail-icon"><i class="fa-solid fa-phone"></i></div>
+                <div>
+                  <span class="detail-label">Phone</span>
+                  <a href="tel:+916364527371" class="detail-value">+91-6364527371</a>
+                </div>
+              </div>
+
+              <div class="detail-item">
+                <div class="detail-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                <div>
+                  <span class="detail-label">LinkedIn</span>
+                  <a href="https://www.linkedin.com/in/karthikgowdacy" target="_blank" rel="noreferrer" class="detail-value">linkedin.com/in/karthikgowdacy</a>
+                </div>
+              </div>
+
+              <div class="detail-item">
+                <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <span class="detail-label">Location</span>
+                  <span class="detail-value">Bengaluru, Karnataka, India</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="admin-link-box">
+              <i class="fa-solid fa-lock"></i>
+              <a href="/admin/messages" target="_blank">Admin Message Inbox &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Form Column -->
+          <form id="contact-form" class="contact-form glass-card animate-on-scroll" novalidate>
+            <h3><i class="fa-solid fa-envelope-open-text"></i> Send a Message</h3>
+            
+            <div class="form-group">
+              <label for="name">Your Name *</label>
+              <div class="input-wrap">
+                <i class="fa-solid fa-user input-icon"></i>
+                <input id="name" name="name" type="text" placeholder="e.g. Rahul Sharma" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Your Email Address *</label>
+              <div class="input-wrap">
+                <i class="fa-solid fa-at input-icon"></i>
+                <input id="email" name="email" type="email" placeholder="e.g. rahul@example.com" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <div class="input-wrap">
+                <i class="fa-solid fa-comment-dots input-icon textarea-icon"></i>
+                <textarea id="message" name="message" rows="4" placeholder="Tell me about your role, project, or inquiry..." required></textarea>
+              </div>
+            </div>
+
+            <button type="submit" id="submit-btn" class="btn btn-primary btn-block">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+
+            <div id="form-status" class="form-status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Messages Inbox Section -->
+    <section id="inbox" class="section inbox-section">
+      <div class="container">
+        <div class="section-heading text-center animate-on-scroll">
+          <p class="eyebrow"><i class="fa-solid fa-lock"></i> Private Inbox</p>
+          <h2>Messages <span class="gradient-text">Received</span></h2>
+          <p>Protected recruiter messages section. Only Karthik can unlock and view messages using his secret password.</p>
+        </div>
+
+        <!-- Password Lock Card -->
+        <div id="inbox-lock-screen" class="inbox-lock-card glass-card animate-on-scroll">
+          <div class="lock-icon-wrap"><i class="fa-solid fa-user-shield"></i></div>
+          <h3>Admin Authentication Required</h3>
+          <p>Please enter Karthik's secret password to unlock received messages.</p>
+          
+          <form id="inbox-auth-form" class="inbox-auth-form">
+            <div class="input-wrap" style="max-width: 400px; margin: 0 auto 1.25rem;">
+              <i class="fa-solid fa-key input-icon"></i>
+              <input type="password" id="inbox-password-input" placeholder="Enter password (e.g. karthik123)" required />
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fa-solid fa-lock-open"></i> Unlock Inbox
+            </button>
+          </form>
+          <div id="inbox-auth-status" class="form-status" style="margin-top:1rem; max-width: 400px; margin: 1rem auto 0;"></div>
+        </div>
+
+        <!-- Unlocked View Container -->
+        <div id="inbox-unlocked-view" style="display: none;">
+          <div class="inbox-controls animate-on-scroll">
+            <div class="inbox-counter">
+              <i class="fa-solid fa-envelope-open"></i> <span id="inbox-count-badge">0 Messages</span>
+            </div>
+            <div style="display: flex; gap: 0.75rem;">
+              <button id="inbox-refresh-btn" class="btn btn-secondary btn-small">
+                <i class="fa-solid fa-rotate-right"></i> Refresh
+              </button>
+              <button id="inbox-lock-btn" class="btn btn-outline btn-small">
+                <i class="fa-solid fa-lock"></i> Lock Inbox
+              </button>
+            </div>
+          </div>
+
+          <div id="inbox-messages-container" class="inbox-messages-grid animate-on-scroll">
+            <!-- Dynamically populated messages -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project Detail Modal -->
+  <div id="project-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-card glass-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button id="modal-close-btn" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div id="modal-body">
+        <!-- Dynamically injected project content -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="#home">&lt;K/&gt; Karthik Gowda</a>
+        <p>Full Stack Web Developer &amp; AI Intern based in Bengaluru.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-copy">
+        <p>&copy; 2026 Karthik Gowda C Y. Built for Future Interns &amp; Recruiter Showcasing.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
