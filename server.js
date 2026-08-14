@@ -1,32 +1,71 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
 const messagesPath = path.join(__dirname, 'messages.json');
 
-// Ensure messages.json exists
-if (!fs.existsSync(messagesPath)) {
-  fs.writeFileSync(messagesPath, JSON.stringify([], null, 2));
+// Enable CORS middleware for cross-origin and file:// requests
+app.use((req, res, next) => {
+  const origin = req.headers.origin;
+  if (origin && origin !== 'null') {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
+  } else {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+  }
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, x-admin-password');
+  
+  if (req.method === 'OPTIONS') {
+    return res.status(204).end();
+  }
+  next();
+});
+
+// Ensure messages.json exists safely
+try {
+  if (!fs.existsSync(messagesPath)) {
+    fs.writeFileSync(messagesPath, JSON.stringify([], null, 2));
+  }
+} catch (err) {
+  console.error('[Storage Warning] Could not initialize messages.json:', err);
 }
 
 app.use(express.static(path.join(__dirname)));
 app.use(express.json());
 
+// Health check endpoint required for Render deployments
+app.get(['/health', '/api/health'], (req, res) => {
+  res.status(200).json({
+    status: 'ok',
+    service: 'Karthik Gowda Portfolio API',
+    uptime: process.uptime(),
+    timestamp: new Date().toISOString()
+  });
+});
+
 // Helper to safely read messages
 function readMessages() {
   try {
+    if (!fs.existsSync(messagesPath)) return [];
     const data = fs.readFileSync(messagesPath, 'utf8');
     return JSON.parse(data) || [];
   } catch (err) {
+    console.error('[Storage Error] Read failed:', err);
     return [];
   }
 }
 
 // Helper to safely write messages
 function writeMessages(messages) {
-  fs.writeFileSync(messagesPath, JSON.stringify(messages, null, 2));
+  try {
+    fs.writeFileSync(messagesPath, JSON.stringify(messages, null, 2));
+  } catch (err) {
+    console.error('[Storage Error] Write failed:', err);
+  }
 }
 
 // POST Contact Form Submission
@@ -104,10 +143,19 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, '0.0.0.0', () => {
   console.log(`===================================================`);
   console.log(` Karthik Gowda Portfolio Server running on port ${PORT}`);
   console.log(` Live Website: http://localhost:${PORT}`);
+  console.log(` Health Endpoint: http://localhost:${PORT}/health`);
   console.log(` Admin Portal: http://localhost:${PORT}/admin/messages`);
   console.log(`===================================================`);
+});
+
+server.on('error', (err) => {
+  if (err.code === 'EADDRINUSE') {
+    console.error(`[Server Error] Port ${PORT} is already in use by another process.`);
+  } else {
+    console.error('[Server Error]', err);
+  }
 });

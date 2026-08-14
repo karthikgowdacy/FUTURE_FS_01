@@ -99,7 +99,7 @@ karthi portfolio/
 
 **Karthik Gowda C Y**  
 - **Role**: Computer Science Engineering Student & Full Stack Intern  
-- **Email**: [karthikgowdacy@gmail.com](mailto:karthikgowdacy@gmail.com)  
+- **Email**: [karthikgowdacy45@gmail.com](mailto:karthikgowdacy45@gmail.com)  
 - **Phone**: +91-6364527371  
 - **LinkedIn**: [linkedin.com/in/karthikgowdacy](https://www.linkedin.com/in/karthikgowdacy)  
 - **Location**: Bengaluru, Karnataka, India  

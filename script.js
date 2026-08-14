@@ -260,6 +260,23 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================
+  // Helper: Dynamic API Base URL Resolution
+  // ==========================================
+  function getApiBaseUrl() {
+    if (typeof window.API_BASE_URL !== 'undefined' && window.API_BASE_URL) {
+      return window.API_BASE_URL.replace(/\/+$/, '');
+    }
+    // If running via file:// or a static dev server (e.g. VS Code Live Server on port 5500/3000), target local Node API at port 8080
+    const isLocalDevPort = window.location.port && window.location.port !== '8080';
+    if (window.location.protocol === 'file:' || isLocalDevPort) {
+      const hostname = window.location.hostname || 'localhost';
+      const host = (hostname === '127.0.0.1') ? '127.0.0.1' : 'localhost';
+      return `http://${host}:8080`;
+    }
+    return '';
+  }
+
+  // ==========================================
   // 8. Contact Form Handling & Backend Fetch
   // ==========================================
   const form = document.getElementById('contact-form');
@@ -290,7 +307,8 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
       showStatus('Submitting your message to Karthik...', '');
 
-      fetch('/api/contact', {
+      const API_BASE_URL = getApiBaseUrl();
+      fetch(`${API_BASE_URL}/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -307,13 +325,13 @@ document.addEventListener('DOMContentLoaded', () => {
           } else {
             showStatus(data.message || 'Thank you! Your message was sent successfully.', 'success');
             form.reset();
-            loadInboxMessages(); // Automatically refresh inbox on new message
+            checkInboxAuth();
           }
         })
         .catch(() => {
           submitBtn.disabled = false;
           submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
-          showStatus('Unable to reach backend server right now. Please try emailing karthikgowdacy@gmail.com directly.', 'error');
+          showStatus('Unable to reach backend server right now. Please try emailing karthikgowdacy45@gmail.com directly.', 'error');
         });
     });
   }
@@ -349,7 +367,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Verify stored password with backend
-    fetch('/api/messages', {
+    const API_BASE_URL = getApiBaseUrl();
+    fetch(`${API_BASE_URL}/api/messages`, {
       headers: { 'x-admin-password': adminPassword }
     })
       .then((res) => {
@@ -429,7 +448,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!enteredPass) return;
 
-      fetch('/api/messages', {
+      const API_BASE_URL = getApiBaseUrl();
+      fetch(`${API_BASE_URL}/api/messages`, {
         headers: { 'x-admin-password': enteredPass }
       })
         .then((res) => {
@@ -455,7 +475,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.deleteInboxMsg = function(id) {
     if (!confirm('Are you sure you want to delete this message?')) return;
-    fetch(`/api/messages/${id}`, {
+    const API_BASE_URL = getApiBaseUrl();
+    fetch(`${API_BASE_URL}/api/messages/${id}`, {
       method: 'DELETE',
       headers: { 'x-admin-password': adminPassword }
     })
